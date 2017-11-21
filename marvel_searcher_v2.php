@@ -6,8 +6,9 @@
 <?php
 
 if ( isset($_POST['hero'])) {
-
-	$search_query = $_POST['hero'];
+	
+    $content = str_replace(' ', '+', $_POST['hero']);
+    $search_query =  $content;
     $PRIV_KEY = "YOUR_PRIVATE_KEY";
     $PUBLIC_KEY = "YOUR_PUBLIC_KEY";
 
