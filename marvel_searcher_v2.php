@@ -39,6 +39,7 @@ if ( isset($_POST['hero'])) {
 //Format JSON output
     $results = json_decode($output, true);
 
+if(!empty($results['data']['results'][0]['name'])){
     $hero_name= $results['data']['results'][0]['name'];
     $hero_description = $results['data']['results'][0]['description'];
     $main_image = $results['data']['results'][0]['thumbnail']['path'] . '.' . $results['data']['results'][0]['thumbnail']['extension'];
@@ -67,4 +68,10 @@ if ( isset($_POST['hero'])) {
    curl_close($ch);
 
 }
+else{
+    echo '<i>No se han encontrado resultados</i>';
+}
+}
+
+?>
 ?>
