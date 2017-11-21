@@ -72,6 +72,4 @@ else{
     echo '<i>No se han encontrado resultados</i>';
 }
 }
-
-?>
 ?>
